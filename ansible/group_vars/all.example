@@ -20,5 +20,4 @@ ubuntu_common_ssh_port: 22
 ubuntu_common_mosh_from_port: 60000
 ubuntu_common_mosh_to_port: 60010
 
-# You shouldn't need to change this.
 mysql_port: 3306
