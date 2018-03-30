@@ -3,3 +3,4 @@ packer/variables.json
 .env
 .terraform
 *.tfstate*
+ansible/group_vars/all
