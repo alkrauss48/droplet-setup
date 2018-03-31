@@ -1,10 +1,11 @@
 ---
 - name: Install Git, MySQL, Nginx, and projects
   hosts: all
+  remote_user: root
 
   roles:
     - secure
-    - git
-    - mysql
-    - nginx
-    - growlerfriday
+    # - git
+    # - mysql
+    # - nginx
+    # - growlerfriday
