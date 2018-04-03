@@ -1,4 +1,5 @@
 packer/variables.json
+ansible/hosts
 *.retry
 .env
 .terraform
