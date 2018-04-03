@@ -1,6 +1,12 @@
-UBUNTU_COMMON_ROOT_PASSWORD: 'xxx'
-UBUNTU_COMMON_DEPLOY_PASSWORD: 'xxx'
+# These 2 passwords must be already hashed passwords.
+# Use this command to generate the hashes:
+# openssl passwd -salt SALT -1 'PASSWORD'
+
+UBUNTU_COMMON_ROOT_PASSWORD: 'hashed_password'
+UBUNTU_COMMON_DEPLOY_PASSWORD: 'hashed_password'
+
 UBUNTU_COMMON_LOGWATCH_EMAIL: youremail@example.com
+
 
 ubuntu_common_deploy_user_name: deploy
 ubuntu_common_deploy_public_keys:
