@@ -46,6 +46,12 @@
 - name: Allow ssh traffic
   ufw: rule=allow port={{ ubuntu_common_ssh_port }} proto=tcp
 
+- name: Allow http traffic
+  ufw: rule=allow port=80 proto=tcp
+
+- name: Allow https traffic
+  ufw: rule=allow port=443 proto=tcp
+
 - name: Allow mosh traffic
   ufw: rule=allow proto=udp port={{ ubuntu_common_mosh_from_port }}:{{ ubuntu_common_mosh_to_port }}
   when: "'mosh' in ubuntu_common_optional_packages"

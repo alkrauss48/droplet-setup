@@ -20,7 +20,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "scripts/ansible.sh"
+      "script": "scripts/python.sh"
     },
     {
       "type": "ansible",
