@@ -1,0 +1,14 @@
+---
+- name: Install PHP-FPM package
+  apt: name=php-fpm state=present
+
+- name: Install PHP-MySQL package
+  apt: name=php-mysql state=present
+
+- name: Update PHP fix_pathinfo
+  lineinfile:
+    dest: /etc/php/7.0/fpm/php.ini
+    regexp: '^;cgi.fix_pathinfo=1'
+    line: "cgi.fix_pathinfo=0"
+    state: present
+  notify: restart php-fpm

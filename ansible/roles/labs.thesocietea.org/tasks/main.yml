@@ -1,0 +1,17 @@
+---
+- name: Clone labs.thesocietea.org
+  git:
+    repo: https://github.com/alkrauss48/labs.git
+    dest: /var/www/html/labs.thesocietea.org
+
+- name: Copy labs.thesocietea.org nginx configuration to sites-available
+  template:
+    src: templates/labs.thesocietea.org.conf.j2
+    dest: /etc/nginx/sites-available/labs.thesocietea.org.conf
+
+- name: Create sites-enabled symlink for nginx labs.thesocietea.org port 80 configuration
+  file:
+    src: /etc/nginx/sites-available/labs.thesocietea.org.conf
+    dest: /etc/nginx/sites-enabled/labs.thesocietea.org.conf
+    state: link
+  notify: restart nginx
